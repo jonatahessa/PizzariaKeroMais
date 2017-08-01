@@ -18,6 +18,7 @@ section {
   margin: 0px;
   float: left;
   width: 100%;
+  height: 80px;
   background-color: #EDEDED;
   list-style: none;
   font: 100% Tahoma;
@@ -32,10 +33,14 @@ section {
 
 #menu ul li button {
   background-color: #EDEDED;
-  color: #333;
+  color: #251d1d;
   text-decoration: none;
-  padding: 1.5% 4%;
+  height: 100%;
   float: left;
+  width: 13%;
+  font-size: 130%;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
   transition: 1s;
   border: none;
 }
@@ -45,21 +50,30 @@ section {
   color: #6D6D6D;
 }
 
-#firstimg {
+#firstimg img {
   width: 100%;
-  height: 30%;
-  background-image: url(../_imagens/img1.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
+  height: auto;
 }
 
 #titulo h1 {
   display: block;
   margin: auto;
-  padding-top: 15%;
+  padding-top: 13%;
   font-size: 400%;
   font-family: 'Permanent Marker', cursive;
-  color: #29b71f;
+  color: #ededed;
+  text-align: center;
+  text-shadow: 3px 3px 3px black;
+  opacity: .9;
+}
+
+#titulo h2 {
+  display: block;
+  margin: auto;
+  font-size: 350%;
+  font-family: 'Baloo Da', cursive;
+  color: #ededed;
+  text-shadow: 3px 3px 3px black;
   text-align: center;
   opacity: .9;
 }

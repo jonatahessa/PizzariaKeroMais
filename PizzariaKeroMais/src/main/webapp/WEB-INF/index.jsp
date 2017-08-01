@@ -9,7 +9,9 @@
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Caveat|Vast+Shadow" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Da" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
         <link rel="shortcut icon" href="./_imagens/favicon.ico" />
         <script type="text/javascript" src="./_resources/domPaginaInicial.js"></script>
         <title>Pizzaria Kero Mais</title>
@@ -19,7 +21,7 @@
             <div id="menu">
                 <ul>
                   <li><button type="button" id="buttonhome">Home</button></li>
-                  <li><button type="button" id="buttonnossacasa">Nossa Casa</button></li>
+                  <li><button type="button" id="buttonnossacasa">A Kero Mais</button></li>
                   <li><button type="button" id="buttonpromocoes">Promoções</button></li>
                   <li><button type="button" id="buttoncardapio">Cardápio</button></li>
                   <li><button type="button" id="buttonlocalizacao">Localização</button></li>
@@ -28,13 +30,11 @@
             </div>
 
             <div id="firstimg">
-              <div id="titulo">
-                <h1>PIZZARIA KERO MAIS</h1>
-              </div>
+              <img src="_imagens/img1.jpg">
             </div>
 
             <div class="sessoes" id="nossacasa">
-                <h1 class="titulos">Nossa Casa</h1>
+                <h1 class="titulos">A Kero Mais</h1>
                 <hr/>
                 <div id="fachada">
                     <img src="_imagens/FachadaPizzaria.jpg">
