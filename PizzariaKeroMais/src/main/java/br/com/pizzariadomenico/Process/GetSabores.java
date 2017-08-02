@@ -28,12 +28,16 @@ public class GetSabores extends HttpServlet {
             throws ServletException, IOException, Exception {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-        List<Produto> pizzasComuns = Utils.ListarPizzasPaginaInicialComum();
-        List<Produto> pizzasDoces = Utils.ListarPizzasPaginaInicialDoces();
+        List<Produto> pizzas = Utils.ListarPizzasPaginaInicialPizzas();
+        List<Produto> esfihas = Utils.ListarPizzasPaginaInicialEsfiha();
+        List<Produto> fogazzas = Utils.ListarPizzasPaginaInicialFogazza();
+        List<Produto> bordas = Utils.ListarPizzasPaginaInicialBordas();
         List<Produto> bebidas = Utils.ListarPizzasPaginaInicialBebidas();
         List<Produto> promo = Utils.ListarPizzasPaginaInicialPromocoes();
-        request.setAttribute("salgadas", pizzasComuns);
-        request.setAttribute("pizzasdoces", pizzasDoces);
+        request.setAttribute("pizzas", pizzas);
+        request.setAttribute("esfihas", esfihas);
+        request.setAttribute("fogazzas", fogazzas);
+        request.setAttribute("bordas", bordas);
         request.setAttribute("bebidas", bebidas);
         for (Produto prod : promo){
             String promoConvert = prod.getDescricao().replaceAll("\n", "<br/>");

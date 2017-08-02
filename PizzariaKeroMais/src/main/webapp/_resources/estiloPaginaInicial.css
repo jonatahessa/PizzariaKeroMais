@@ -38,7 +38,7 @@ section {
   height: 100%;
   float: left;
   width: 13%;
-  font-size: 130%;
+  font-size: 150%;
   font-weight: bold;
   font-family: 'Josefin Sans', sans-serif;
   transition: 1s;
@@ -92,16 +92,21 @@ section {
 }
 
 .titulos {
-    font-family: Tahoma;
+    font-family: 'Lusitana', serif;
     font-weight: bold;
     color: #a6a0a0;
+    font-size: 220%;
+}
+
+#nossacasa {
+  margin-top: 5%;
 }
 
 #nossacasa p {
-    font-family: 'Hind', sans-serif;
+    font-family: 'Jaldi', sans-serif;
     font-weight: bold;
     color: #a6a0a0;
-    font-size: 90%;
+    font-size: 120%;
     text-align: left;
 }
 
@@ -132,7 +137,8 @@ section {
 
 #fachada img {
     width: 100%;
-    max-width: 450px;
+    max-width: 550px;
+    border-radius: 3%;
 }
 
 #sessaopromocoes {
@@ -140,10 +146,9 @@ section {
 }
 
 .paineispromo {
-  border: 1px solid;
+  border: 3px solid;
   border-color: #a6a0a0;
-  width: 70%;
-  height: 250px;
+  width: 60%;
   display: block;
   margin: 2% auto;
   text-align: center;
@@ -152,26 +157,31 @@ section {
 }
 
 .paineispromo h3 {
-  margin-top: 5%;
-  font-size: 150%;
+  font-size: 300%;
+  font-family: 'Permanent Marker', cursive;
   font-weight: bolder;
-  color: #a6a0a0;
+  color: #ff2929;
+  text-shadow: 3px 3px 3px #a6a0a0;
 }
 
 .paineispromo p {
-  font-size: 120%;
-  line-height: 120%;
+  font-size: 200%;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  line-height: 140%;
+  color: #a6a0a0;
 }
 
 .paineispromo p:last-of-type {
   color: #f72b2f;
   font-family: 'Pacifico', cursive;
   font-weight: bold;
-  font-size: 150%;
+  text-shadow: 3px 3px 3px #a6a0a0;
+  font-size: 400%;
   margin-top: 2%;
 }
 
-.mostrarsalgadas {
+.mostrarpizzas {
     width: 100%;
     height: auto;
     position: static;
@@ -183,7 +193,31 @@ section {
     display: none;
 }
 
-.mostrardoces {
+.mostraresfirras {
+    width: 100%;
+    height: auto;
+    position: static;
+    transition: 1s;
+    animation-name: exibir;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    display: none;
+}
+
+.mostrarfogazzas {
+    width: 100%;
+    height: auto;
+    position: static;
+    transition: 1s;
+    animation-name: exibir;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    display: none;
+}
+
+.mostrarbordas {
     width: 100%;
     height: auto;
     position: static;
@@ -213,13 +247,25 @@ section {
     75% { visibility: visible; opacity: 1; }
 }
 
-.mostrarsalgadas table {
+.mostrarpizzas table {
     width: 100%;
     font-family: 'Hind', sans-serif;
     color: #a69090;
 }
 
-.mostrardoces table {
+.mostrarbordas table {
+    width: 100%;
+    font-family: 'Hind', sans-serif;
+    color: #a69090;
+}
+
+.mostraresfirras table {
+    width: 100%;
+    font-family: 'Hind', sans-serif;
+    color: #a69090;
+}
+
+.mostrarfogazzas table {
     width: 100%;
     font-family: 'Hind', sans-serif;
     color: #a69090;
@@ -231,12 +277,22 @@ section {
     color: #a69090;
 }
 
-.mostrarsalgadas table tr:nth-child(odd) {
+.mostrarpizzas table tr:nth-child(odd) {
     background-color: #ccc;
     color: black;
 }
 
-.mostrardoces table tr:nth-child(odd) {
+.mostrarbordas table tr:nth-child(odd) {
+    background-color: #ccc;
+    color: black;
+}
+
+.mostraresfirras table tr:nth-child(odd) {
+    background-color: #ccc;
+    color: black;
+}
+
+.mostrarfogazzas table tr:nth-child(odd) {
     background-color: #ccc;
     color: black;
 }
@@ -246,11 +302,19 @@ section {
     color: black;
 }
 
-.mostrarsalgadas table th {
+.mostrarpizzas table th {
     text-align: left;
 }
 
-.mostrardoces table th {
+.mostrarbordas table th {
+    text-align: left;
+}
+
+.mostraresfirras table th {
+    text-align: left;
+}
+
+.mostrarfogazzas table th {
     text-align: left;
 }
 
@@ -258,30 +322,58 @@ section {
     text-align: left;
 }
 
-.mostrarsalgadas button {
+.mostrarpizzas button {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Permanent Marker', cursive;
     font-weight: bold;
     color: #f72b2f;
     transition: 1s;
-    width: 40%;
+    width: 100%;
     height: 60px;
-    font-size: 150%;
+    font-size: 200%;
     margin: 0 auto;
     display: block;
 }
 
-.mostrardoces button {
+.mostrarbordas button {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Permanent Marker', cursive;
     font-weight: bold;
     color: #f72b2f;
     transition: 1s;
-    width: 40%;
+    width: 100%;
     height: 60px;
-    font-size: 150%;
+    font-size: 200%;
+    margin: 0 auto;
+    display: block;
+}
+
+.mostraresfirras button {
+    border: none;
+    background: transparent;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+    color: #f72b2f;
+    transition: 1s;
+    width: 100%;
+    height: 60px;
+    font-size: 200%;
+    margin: 0 auto;
+    display: block;
+}
+
+.mostrarfogazzas button {
+    border: none;
+    background: transparent;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+    color: #f72b2f;
+    transition: 1s;
+    width: 100%;
+    height: 60px;
+    font-size: 200%;
     margin: 0 auto;
     display: block;
 }
@@ -289,28 +381,27 @@ section {
 .mostrarbebidas button {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Permanent Marker', cursive;
     font-weight: bold;
     color: #f72b2f;
     transition: 1s;
-    width: 40%;
+    width: 100%;
     height: 60px;
-    font-size: 150%;
+    font-size: 200%;
     margin: 0 auto;
     display: block;
 }
 
-#abresalgadas {
+#abrepizzas {
     border: none;
     background: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Permanent Marker', cursive;
     font-weight: bold;
     color: #f72b2f;
     transition: 1s;
-    width: 40%;
-    height: 60px;
-    font-size: 150%;
-    margin: auto;
+    width: 100%;
+    font-size: 300%;
+    margin: 4% auto;
     left: 0;
     right: 0;
     display: block;
@@ -321,46 +412,84 @@ section {
     display: block;
 }
 
-#abredoces {
-    border: none;
-    background: transparent;
-    font-family: 'Pacifico', cursive;
-    font-weight: bold;
-    color: #f72b2f;
-    transition: 1s;
-    width: 40%;
-    height: 60px;
-    font-size: 150%;
-    margin: auto;
-    left: 0;
-    right: 0;
-    display: block;
-    animation-name: esconder;
-    animation-duration: 3s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-    display: block;
+#abrebordas {
+  border: none;
+  background: transparent;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: bold;
+  color: #f72b2f;
+  transition: 1s;
+  width: 100%;
+  font-size: 300%;
+  margin: 4% auto;
+  left: 0;
+  right: 0;
+  display: block;
+  animation-name: esconder;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  display: block;
+}
+
+#abreesfirras {
+  border: none;
+  background: transparent;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: bold;
+  color: #f72b2f;
+  transition: 1s;
+  width: 100%;
+  font-size: 300%;
+  margin: 4% auto;
+  left: 0;
+  right: 0;
+  display: block;
+  animation-name: esconder;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  display: block;
+}
+
+#abrefogazzas {
+  border: none;
+  background: transparent;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: bold;
+  color: #f72b2f;
+  transition: 1s;
+  width: 100%;
+  font-size: 300%;
+  margin: 4% auto;
+  left: 0;
+  right: 0;
+  display: block;
+  animation-name: esconder;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  display: block;
 }
 
 #abrebebidas {
-    border: none;
-    background: transparent;
-    font-family: 'Pacifico', cursive;
-    font-weight: bold;
-    color: #f72b2f;
-    transition: 1s;
-    width: 40%;
-    height: 60px;
-    font-size: 150%;
-    margin: auto;
-    left: 0;
-    right: 0;
-    display: block;
-    animation-name: esconder;
-    animation-duration: 3s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-    display: block;
+  border: none;
+  background: transparent;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: bold;
+  color: #f72b2f;
+  transition: 1s;
+  width: 100%;
+  font-size: 300%;
+  margin: 4% auto;
+  left: 0;
+  right: 0;
+  display: block;
+  animation-name: esconder;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  display: block;
 }
 
 .celulas {
@@ -405,6 +534,7 @@ section {
 
 #sessaolocalizacao iframe {
     width: 100%;
+    height: 500px;
     display: block;
 }
 
@@ -435,6 +565,15 @@ section {
     margin-bottom: 1%;
     text-align: center;
     font-family: 'Hind', sans-serif;
+}
+
+#sessaocontato a {
+  color: #d5d6d7;
+  font-size: 250%;
+}
+
+#sessaocontato img {
+  width: 5%;
 }
 
 #sessaocontato div {

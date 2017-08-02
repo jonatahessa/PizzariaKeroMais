@@ -12,6 +12,9 @@
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Baloo+Da" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lusitana" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Jaldi" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link rel="shortcut icon" href="./_imagens/favicon.ico" />
         <script type="text/javascript" src="./_resources/domPaginaInicial.js"></script>
         <title>Pizzaria Kero Mais</title>
@@ -59,9 +62,9 @@
             <div class="sessoes" id="sessaocardapio">
                 <h1 class="titulos">Cardápio</h1>
                 <hr/>
-                <button id="abresalgadas" type="button" name="abresalgadas">Pizzas Salgadas</button>
-                <div class="mostrarsalgadas">
-                    <button class="buttonsfecharsalgadas" type="button" name="fecharcardapio">Fechar</button>
+                <button id="abrepizzas" type="button" name="abrepizzas">Abrir Pizzas</button>
+                <div class="mostrarpizzas">
+                    <button class="buttonsfecharpizzas" type="button" name="fecharcardapio">Fechar</button>
                     <table>
                         <tr>
                             <th id="numeropizza">Número</th>
@@ -69,44 +72,80 @@
                             <th id="descricao">Ingredientes</th>
                             <th id="precopizza">Preço</th>
                         </tr>
-                        <c:forEach var="comuns" items="${salgadas}">
+                        <c:forEach var="pizza" items="${pizzas}">
                             <tr>
-                                <td class="celulas">${comuns.codigo}</td>
-                                <td class="celulas">${comuns.nome}</td>
-                                <td>${comuns.descricao}</td>
-                                <td class="celulas">${comuns.preco}</td>
+                                <td class="celulas">${pizza.codigo}</td>
+                                <td class="celulas">${pizza.nome}</td>
+                                <td>${pizza.descricao}</td>
+                                <td class="celulas">${pizza.preco}</td>
                             </tr>
                         </c:forEach>
                     </table>
-                    <button class="buttonsfecharsalgadas" type="button" name="fecharcardapio">Fechar</button>
+                    <button class="buttonsfecharpizzas" type="button" name="fecharcardapio">Fechar</button>
                 </div>
 
+                <button id="abreesfirras" type="button" name="abreesfirras">Abrir Esfihas</button>
 
-                <button id="abredoces" type="button" name="abredoces">Pizzas Doces</button>
-
-                <div class="mostrardoces">
-                    <button class="buttonsfechardoces" type="button" name="fecharcardapio">Fechar</button>
+                <div class="mostraresfirras">
+                    <button class="buttonsfecharesfirras" type="button" name="fecharcardapio">Fechar</button>
                     <table>
                         <tr>
-                            <th id="numeropizza">Número</th>
                             <th id="saborpizza">Sabor</th>
-                            <th id="descricao">Ingredientes</th>
+                            <th id="descricao">Descrição</th>
                             <th id="precopizza">Preço</th>
                         </tr>
-                        <c:forEach var="doces" items="${pizzasdoces}">
+                        <c:forEach var="esfiha" items="${esfihas}">
                             <tr>
-                                <td class="celulas">${doces.codigo}</td>
-                                <td class="celulas">${doces.nome}</td>
-                                <td>${doces.descricao}</td>
-                                <td class="celulas">${doces.preco}</td>
+                                <td class="celulas">${esfiha.nome}</td>
+                                <td>${esfiha.descricao}</td>
+                                <td class="celulas">${esfiha.preco}</td>
                             </tr>
                         </c:forEach>
                     </table>
-                    <button class="buttonsfechardoces" type="button" name="fecharcardapio">Fechar</button>
+                    <button class="buttonsfecharesfirras" type="button" name="fecharcardapio">Fechar</button>
                 </div>
 
+                <button id="abrefogazzas" type="button" name="abreesfogazzas">Abrir Fogazzas</button>
 
-                <button id="abrebebidas" type="button" name="abredoces">Bebidas</button>
+                <div class="mostrarfogazzas">
+                    <button class="buttonsfecharfogazzas" type="button" name="fecharcardapio">Fechar</button>
+                    <table>
+                        <tr>
+                            <th id="saborpizza">Sabor</th>
+                            <th id="descricao">Descrição</th>
+                            <th id="precopizza">Preço</th>
+                        </tr>
+                        <c:forEach var="fogazza" items="${fogazzas}">
+                            <tr>
+                                <td class="celulas">${fogazza.nome}</td>
+                                <td>${fogazza.descricao}</td>
+                                <td class="celulas">${fogazza.preco}</td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                    <button class="buttonsfecharfogazzas" type="button" name="fecharcardapio">Fechar</button>
+                </div>
+
+                <button id="abrebordas" type="button" name="abrebordas">Abrir Bordas</button>
+
+                <div class="mostrarbordas">
+                    <button class="buttonsfecharbordas" type="button" name="fecharcardapio">Fechar</button>
+                    <table>
+                        <tr>
+                            <th id="saborpizza">Sabor</th>
+                            <th id="precopizza">Preço</th>
+                        </tr>
+                        <c:forEach var="borda" items="${bordas}">
+                            <tr>
+                                <td class="celulas">${borda.nome}</td>
+                                <td class="celulas">${borda.preco}</td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                    <button class="buttonsfecharborda" type="button" name="fecharcardapio">Fechar</button>
+                </div>
+
+                <button id="abrebebidas" type="button" name="abredoces">Abrir Bebidas</button>
 
                 <div class="mostrarbebidas">
                     <button class="buttonsfecharbebidas" type="button" name="fecharcardapio">Fechar</button>
@@ -133,23 +172,20 @@
             <div class="sessoes" id="sessaolocalizacao">
                 <h1 class="titulos">Localização</h1>
                 <hr/>
-                <p>Alameda Tietê, 255 – Jardins<br/>
-                Esquina com a rua Haddock Lobo, 1255<br/></p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.9855614634575!2d-46.65572438854584!3d-23.604850761768482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb41cfb00b940c4!2sSala+Vip!5e0!3m2!1spt-BR!2sbr!4v1499001433673" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <p>R. Zike Tuma, 928 - Jardim Ubirajara, São Paulo - SP</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1826.855143690998!2d-46.66923455891795!3d-23.68631640352818!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x427e1083504e490b!2sKero+Mais!5e0!3m2!1spt-BR!2sbr!4v1501674984114" allowfullscreen></iframe>
             </div>
 
             <footer id="sessaocontato">
               <div class="sessoes">
                 <h1 class="titulos">Contato</h1>
                 <hr/>
-                <h2>Telefone: 5611-6122</h2>
-                <p>Email: jonata.hessa@gmail.com<br/>
-                Domingo, Segunda e Terça-feira – 18:30h à 00:30h<br/>
-                Quarta e Quinta-feira – 18:30h à 1:00h<br/>
-                Sexta, Sábado e Vésperas de feriados. – 18:30h às 02:00h<br/>
-                Horários para o Delivery:<br/>
-                De Segunda à Segunda – 18:30hs à 00:00hs</p>
-                <p id="copyright">Copyright (c) Jonata Hessa 2017 Copyright Holder All Rights Reserved.</p>
+                <h2><a href="tel:01156141144">5614-1144</a><br/>
+                    <a href="tel:01156122631">5612-2631</a><br/>
+                    <a href="tel:011947750958">94775-0958 </a><img src="_imagens/whatsapp.png"></h2>
+                <p>De Segunda à Quinta e Domingo das 18h às 00h<br/>
+                  Sexta e Sábado das 18h às 01h</p>
+                <p id="copyright">Copyright (c) Pizzaria Kero Mais Copyright Holder All Rights Reserved.</p>
               </div>
             </footer>
         </section>

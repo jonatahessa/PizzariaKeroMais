@@ -1,9 +1,13 @@
 function main() {
-  var fechar = [];
-  var fecharDoces = [];
+  var fecharPizzas = [];
+  var fecharBordas = [];
+  var fecharEsfirras = [];
+  var fecharFogazzas = [];
   var fecharBebidas = [];
-  var abrir = document.querySelector("#abresalgadas");
-  var abrirDoces = document.querySelector("#abredoces");
+  var abrirPizzas = document.querySelector("#abrepizzas");
+  var abrirBordas = document.querySelector("#abrebordas");
+  var abrirEsfirras = document.querySelector("#abreesfirras");
+  var abrirFogazzas = document.querySelector("#abrefogazzas");
   var abrirBebidas = document.querySelector("#abrebebidas");
   var botaocardapio = document.querySelector("#buttoncardapio");
   var nossa = document.querySelector("#buttonnossacasa");
@@ -12,14 +16,24 @@ function main() {
   var localiza = document.querySelector("#buttonlocalizacao");
   var contato = document.querySelector("#buttoncontato");
 
-  fechar = document.querySelectorAll(".buttonsfecharsalgadas");
-  for (var i = 0; i < fechar.length; i++) {
-    fechar[i].addEventListener("click", hideSalgadas);
+  fecharPizzas = document.querySelectorAll(".buttonsfecharpizzas");
+  for (var i = 0; i < fecharPizzas.length; i++) {
+    fecharPizzas[i].addEventListener("click", hidePizzas);
   }
 
-  fecharDoces = document.querySelectorAll(".buttonsfechardoces");
-  for (var i = 0; i < fecharDoces.length; i++) {
-    fecharDoces[i].addEventListener("click", hideDoces);
+  fecharBordas = document.querySelectorAll(".buttonsfecharbordas");
+  for (var i = 0; i < fecharBordas.length; i++) {
+    fecharBordas[i].addEventListener("click", hideBordas);
+  }
+
+  fecharEsfirras = document.querySelectorAll(".buttonsfecharesfirras");
+  for (var i = 0; i < fecharEsfirras.length; i++) {
+    fecharEsfirras[i].addEventListener("click", hideEsfirras);
+  }
+
+  fecharFogazzas = document.querySelectorAll(".buttonsfecharfogazzas");
+  for (var i = 0; i < fecharFogazzas.length; i++) {
+    fecharFogazzas[i].addEventListener("click", hideFogazzas);
   }
 
   fecharBebidas = document.querySelectorAll(".buttonsfecharbebidas");
@@ -27,8 +41,10 @@ function main() {
     fecharBebidas[i].addEventListener("click", hideBebidas);
   }
 
-  abrir.addEventListener("click", showSalgadas);
-  abrirDoces.addEventListener("click", showDoces);
+  abrirPizzas.addEventListener("click", showPizzas);
+  abrirBordas.addEventListener("click", showBordas);
+  abrirEsfirras.addEventListener("click", showEsfirras);
+  abrirFogazzas.addEventListener("click", showFogazzas);
   abrirBebidas.addEventListener("click", showBebidas);
   varhome.addEventListener("click", home);
   promo.addEventListener("click", promocao);
@@ -62,14 +78,24 @@ function scrollcontato() {
   document.querySelector("#sessaocontato").scrollIntoView();
 }
 
-function showSalgadas() {
-  document.querySelector(".mostrarsalgadas").style.display = "block";
-  document.querySelector("#abresalgadas").style.display = "none";
+function showPizzas() {
+  document.querySelector(".mostrarpizzas").style.display = "block";
+  document.querySelector("#abrepizzas").style.display = "none";
 }
 
-function showDoces() {
-  document.querySelector(".mostrardoces").style.display = "block";
-  document.querySelector("#abredoces").style.display = "none";
+function showBordas() {
+  document.querySelector(".mostrarbordas").style.display = "block";
+  document.querySelector("#abrebordas").style.display = "none";
+}
+
+function showEsfirras() {
+  document.querySelector(".mostraresfirras").style.display = "block";
+  document.querySelector("#abreesfirras").style.display = "none";
+}
+
+function showFogazzas() {
+  document.querySelector(".mostrarfogazzas").style.display = "block";
+  document.querySelector("#abrefogazzas").style.display = "none";
 }
 
 function showBebidas() {
@@ -77,19 +103,34 @@ function showBebidas() {
   document.querySelector("#abrebebidas").style.display = "none";
 }
 
-function hideSalgadas() {
-  document.querySelector(".mostrarsalgadas").style.display = "none";
-  document.querySelector("#abresalgadas").style.display = "block";
+function hidePizzas() {
+  document.querySelector(".mostrarpizzas").style.display = "none";
+  document.querySelector("#abrepizzas").style.display = "block";
+  document.querySelector("#sessaocardapio").scrollIntoView();
 }
 
-function hideDoces() {
-  document.querySelector(".mostrardoces").style.display = "none";
-  document.querySelector("#abredoces").style.display = "block";
+function hideBordas() {
+  document.querySelector(".mostrarbordas").style.display = "none";
+  document.querySelector("#abrebordas").style.display = "block";
+  document.querySelector("#sessaocardapio").scrollIntoView();
+}
+
+function hideEsfirras() {
+  document.querySelector(".mostraresfirras").style.display = "none";
+  document.querySelector("#abreesfirras").style.display = "block";
+  document.querySelector("#sessaocardapio").scrollIntoView();
+}
+
+function hideFogazzas() {
+  document.querySelector(".mostrarfogazzas").style.display = "none";
+  document.querySelector("#abrefogazzas").style.display = "block";
+  document.querySelector("#sessaocardapio").scrollIntoView();
 }
 
 function hideBebidas() {
   document.querySelector(".mostrarbebidas").style.display = "none";
   document.querySelector("#abrebebidas").style.display = "block";
+  document.querySelector("#sessaocardapio").scrollIntoView();
 }
 
 window.addEventListener("load", main);

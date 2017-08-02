@@ -17,14 +17,23 @@ function abrirEditar(form) {
   inputs = [];
   inputs = document.querySelectorAll(".inputseditar");
   var select = document.querySelector("#selecteditar");
-  var optionComum = document.createElement("option");
-  var optionDoce = document.createElement("option");
+  var optionPizza = document.createElement("option");
+  var optionPizzaFogazza = document.createElement("option");
+  var optionEsfiha = document.createElement("option");
+  var optionFogazza = document.createElement("option");
+  var optionBorda = document.createElement("option");
   var optionBebida = document.createElement("option");
   var optionPromo = document.createElement("option");
-  optionComum.innerHTML = "Comum";
-  optionComum.setAttribute("value", "COMUM");
-  optionDoce.innerHTML = "Doce";
-  optionDoce.setAttribute("value", "DOCE");
+  optionPizza.innerHTML = "Pizza";
+  optionPizza.setAttribute("value", "PIZZA");
+  optionEsfiha.innerHTML = "Esfiha";
+  optionEsfiha.setAttribute("value", "ESFIHA");
+  optionFogazza.innerHTML = "Fogazza";
+  optionFogazza.setAttribute("value", "FOGAZZA");
+  optionPizzaFogazza.innerHTML = "Pizza/Fogazza";
+  optionPizzaFogazza.setAttribute("value", "PIZZAEFOGAZZA");
+  optionBorda.innerHTML = "Borda";
+  optionBorda.setAttribute("value", "BORDA");
   optionBebida.innerHTML = "Bebida";
   optionBebida.setAttribute("value", "BEBIDA");
   optionPromo.innerHTML = "Promoção";
@@ -33,29 +42,77 @@ function abrirEditar(form) {
   for (var i = 0; i < inputs.length; i++) {
     inputs[i].value = form[i].value;
   }
-  if (form[4].value == 'COMUM') {
-    select.appendChild(optionComum);
-    select.appendChild(optionDoce);
+  if (form[4].value == 'PIZZA') {
+    select.appendChild(optionPizza);
+    select.appendChild(optionPizzaFogazza);
+    select.appendChild(optionEsfiha);
+    select.appendChild(optionFogazza);
     select.appendChild(optionBebida);
+    select.appendChild(optionBorda);
     select.appendChild(optionPromo);
 
-  } else if (form[4].value == 'DOCE') {
-    select.appendChild(optionDoce);
-    select.appendChild(optionComum);
+  } else if (form[4].value == 'ESFIHA') {
+    select.appendChild(optionEsfiha);
+    select.appendChild(optionPizza);
+    select.appendChild(optionPizzaFogazza);
+    select.appendChild(optionFogazza);
     select.appendChild(optionBebida);
+    select.appendChild(optionBorda);
+    select.appendChild(optionPromo);
+
+  } else if (form[4].value == 'PIZZAEFOGAZZA') {
+    select.appendChild(optionPizzaFogazza);
+    select.appendChild(optionPizza);
+    select.appendChild(optionEsfiha);
+    select.appendChild(optionFogazza);
+    select.appendChild(optionBebida);
+    select.appendChild(optionBorda);
+    select.appendChild(optionPromo);
+
+  } else if (form[4].value == 'FOGAZZA') {
+    select.appendChild(optionFogazza);
+    select.appendChild(optionPizza);
+    select.appendChild(optionPizzaFogazza);
+    select.appendChild(optionEsfiha);
+    select.appendChild(optionBebida);
+    select.appendChild(optionBorda);
+    select.appendChild(optionPromo);
+
+  } else if (form[4].value == 'BORDA') {
+    select.appendChild(optionBorda);
+    select.appendChild(optionBebida);
+    select.appendChild(optionPizza);
+    select.appendChild(optionPizzaFogazza);
+    select.appendChild(optionEsfiha);
+    select.appendChild(optionFogazza);
     select.appendChild(optionPromo);
 
   } else if (form[4].value == 'BEBIDA') {
     select.appendChild(optionBebida);
-    select.appendChild(optionComum);
-    select.appendChild(optionDoce);
+    select.appendChild(optionBorda);
+    select.appendChild(optionPizza);
+    select.appendChild(optionPizzaFogazza);
+    select.appendChild(optionEsfiha);
+    select.appendChild(optionFogazza);
     select.appendChild(optionPromo);
 
   } else if (form[4].value == 'PROMOCAO') {
     select.appendChild(optionPromo);
     select.appendChild(optionBebida);
-    select.appendChild(optionComum);
-    select.appendChild(optionDoce);
+    select.appendChild(optionBorda);
+    select.appendChild(optionPizza);
+    select.appendChild(optionPizzaFogazza);
+    select.appendChild(optionEsfiha);
+    select.appendChild(optionFogazza);
+
+  } else {
+    select.appendChild(optionPizza);
+    select.appendChild(optionPizzaFogazza);
+    select.appendChild(optionPromo);
+    select.appendChild(optionBebida);
+    select.appendChild(optionBorda);
+    select.appendChild(optionEsfiha);
+    select.appendChild(optionFogazza);
   }
 
 
