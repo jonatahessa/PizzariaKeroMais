@@ -31,7 +31,7 @@ function abrirEditar(form) {
   optionFogazza.innerHTML = "Fogazza";
   optionFogazza.setAttribute("value", "FOGAZZA");
   optionPizzaFogazza.innerHTML = "Pizza/Fogazza";
-  optionPizzaFogazza.setAttribute("value", "PIZZAEFOGAZZA");
+  optionPizzaFogazza.setAttribute("value", "PIZZA/FOGAZZA");
   optionBorda.innerHTML = "Borda";
   optionBorda.setAttribute("value", "BORDA");
   optionBebida.innerHTML = "Bebida";
@@ -60,7 +60,7 @@ function abrirEditar(form) {
     select.appendChild(optionBorda);
     select.appendChild(optionPromo);
 
-  } else if (form[4].value == 'PIZZAEFOGAZZA') {
+  } else if (form[4].value == 'PIZZA/FOGAZZA') {
     select.appendChild(optionPizzaFogazza);
     select.appendChild(optionPizza);
     select.appendChild(optionEsfiha);

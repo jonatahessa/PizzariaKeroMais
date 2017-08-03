@@ -63,7 +63,7 @@ public class DaoProduto {
     public static List<Produto> listarPaginaInicialPizza()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'PIZZA' || 'PIZZA/FOGAZZA' ORDER BY ID;";
+                + "Tipo = 'PIZZA' || Tipo = 'PIZZA/FOGAZZA' ORDER BY ID;";
 
         return executarConsulta(sql);
     }
@@ -79,7 +79,7 @@ public class DaoProduto {
     public static List<Produto> listarPaginaInicialFogazza()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'FOGAZZA' || 'PIZZA/FOGAZZA' ORDER BY ID;";
+                + "Tipo = 'FOGAZZA' || Tipo = 'PIZZA/FOGAZZA' ORDER BY ID;";
 
         return executarConsulta(sql);
     }
