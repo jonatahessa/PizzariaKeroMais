@@ -88,16 +88,15 @@
 
                 <div class="mostraresfirras">
                     <button class="buttonsfecharesfirras" type="button" name="fecharcardapio">Fechar</button>
+                    <p>*Esfihas fechadas + 1,00.</p>
                     <table>
                         <tr>
                             <th id="saborpizza">Sabor</th>
-                            <th id="descricao">Descrição</th>
                             <th id="precopizza">Preço</th>
                         </tr>
                         <c:forEach var="esfiha" items="${esfihas}">
                             <tr>
                                 <td class="celulas">${esfiha.nome}</td>
-                                <td>${esfiha.descricao}</td>
                                 <td class="celulas">${esfiha.preco}</td>
                             </tr>
                         </c:forEach>

@@ -205,6 +205,13 @@ section {
     display: none;
 }
 
+.mostraresfirras p {
+  font-family: 'Hind', sans-serif;
+  color: #a69090;
+  font-size: 150%;
+  
+}
+
 .mostrarfogazzas {
     width: 100%;
     height: auto;

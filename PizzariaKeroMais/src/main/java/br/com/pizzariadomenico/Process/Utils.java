@@ -5,7 +5,6 @@
  */
 package br.com.pizzariadomenico.Process;
 
-import com.sun.javafx.scene.control.skin.VirtualFlow;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

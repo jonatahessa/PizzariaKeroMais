@@ -141,7 +141,7 @@ public class DaoProduto {
     public static void desativar(int id)
             throws SQLException, Exception {
         String sql = "UPDATE Pizzas SET Ativo = ?"
-                + "WHERE ID = ?; ";
+                + " WHERE ID = ?; ";
         Connection connection = null;
         PreparedStatement statement = null;
         try {
@@ -164,7 +164,7 @@ public class DaoProduto {
     public static void ativar(int id)
             throws SQLException, Exception {
         String sql = "UPDATE Pizzas SET Ativo = ?"
-                + "WHERE ID = ?; ";
+                + " WHERE ID = ?; ";
         Connection connection = null;
         PreparedStatement statement = null;
         try {
