@@ -141,7 +141,7 @@
                             </tr>
                         </c:forEach>
                     </table>
-                    <button class="buttonsfecharborda" type="button" name="fecharcardapio">Fechar</button>
+                    <button class="buttonsfecharbordas" type="button" name="fecharcardapio">Fechar</button>
                 </div>
 
                 <button id="abrebebidas" type="button" name="abredoces">Abrir Bebidas</button>

@@ -209,7 +209,7 @@ section {
   font-family: 'Hind', sans-serif;
   color: #a69090;
   font-size: 150%;
-  
+
 }
 
 .mostrarfogazzas {
@@ -546,7 +546,8 @@ section {
 }
 
 #sessaolocalizacao p {
-    font-weight: bold;
+  font-size: 150%;
+  font-weight: bold;
 }
 
 #sessaocontato {
