@@ -26,7 +26,7 @@ public class ConnectionUtils {
             String mydatabase = "pizzazzip"; // Nome do banco de dados
             String url = "jdbc:mysql://" + serveName + "/" + mydatabase;
             String username = "pizza002"; // Nome de usuario
-            String password = "pizz@ri@2017"; // Senha de acesso
+            String password = "br@sil20"; // Senha de acesso
             connection = DriverManager.getConnection(url, username, password);
             
             //Teste de conexao
